@@ -18,7 +18,7 @@ class SessionsController < ApplicationController
   end
 
   # Log user out
-  def destory
+  def destroy
     session[:user_id] = nil
     redirect_to '/login'
   end
