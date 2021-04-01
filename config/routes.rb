@@ -14,8 +14,10 @@ Rails.application.routes.draw do
 
   resources :orders, only: [:create, :show]
 
+  #The routes defined below this namespace apply to admin/*
   namespace :admin do
     root to: 'dashboard#show'
+    # making resources here defines new routes which can be seen with bin/rake routes
     resources :products, except: [:edit, :update, :show]
     resources :categories, only: [:index, :new, :create]
   end
