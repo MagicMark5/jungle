@@ -14,13 +14,15 @@
       <thead>
         <tr>
           <th>Category</th>
-          <th>Data</th>
-          <th>Data</th>
-          <th>Data</th>
+          <th>Products</th>
+          <th>Total Quantity</th>
+          <th>Gross Inventory Value</th>
         </tr>
       </thead>
       <tbody>
-        <%= render @categories %>
+        <% @categories.each do |category| %>
+          <%= render category %>
+        <% end %>
       </tbody>
     </table>
 
