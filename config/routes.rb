@@ -30,6 +30,7 @@ Rails.application.routes.draw do
     # making resources here defines new routes which can be seen with bin/rake routes
     resources :products, except: [:edit, :update, :show]
     resources :categories, only: [:index, :new, :create]
+    resources :sales, only: [:index, :new]
   end
 
   # The priority is based upon order of creation: first created -> highest priority.

@@ -1,4 +1,6 @@
 class CartsController < ApplicationController
+  #uncomment if we want to restrict cart access to visitors
+  #before_filter :authorize
 
   def show
   end
