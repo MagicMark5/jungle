@@ -24,6 +24,12 @@
   <% end %>
 
   <aside class="price">
-    <%= humanized_money_with_symbol product.price %>
+    <% if active_sale? %>
+      <%# sale_price = (100 - sale_percent_off) / 100.0 %>
+      <% sale_price = product.price * ((100 - sale_percent_off) / 100.0) %>
+      <%= humanized_money_with_symbol sale_price %> (<strong style="color: red"><%= sale_percent_off %>% off</strong>)
+    <% else %>
+      <%= humanized_money_with_symbol product.price %>
+    <% end %>
   </aside>
 </article>
