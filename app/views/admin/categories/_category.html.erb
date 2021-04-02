@@ -1,10 +1,4 @@
 <tr>
-    <% category_value = 0 %>
-    <% category_quantity = 0 %>
-    <% category.products.each do |product| %>
-    <% category_value += (product.price * product.quantity) %>
-    <% category_quantity += product.quantity %>
-    <% end %>
   <td>
     <%= category.name %>
   </td>
@@ -12,9 +6,9 @@
     <%= category.products.count %>
   </td>
   <td>
-    <%= category_quantity %>
+    <%= category.total_quantity %>
   </td>
   <td>
-    <%= humanized_money_with_symbol category_value %>
+    <%= humanized_money_with_symbol category.total_value %>
   </td>
 </tr>
