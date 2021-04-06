@@ -119,6 +119,8 @@ RSpec.describe User, type: :model do
       end
     end
   end
+
+  # Class Method
   describe '.authenticate_with_credentials' do
     # examples for this class method here
     context "Logging in" do
