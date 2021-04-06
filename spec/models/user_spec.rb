@@ -59,7 +59,7 @@ RSpec.describe User, type: :model do
         @user = User.new(
           name: "Johnny",
           last_name: "Button",
-          email: "johnBtn@example.com",
+          email: "test@test.COM",
           password: "password",
           password_confirmation: "password" 
         )
@@ -67,7 +67,7 @@ RSpec.describe User, type: :model do
         @user2 = User.new(
           name: "Johnny",
           last_name: "Button",
-          email: "JOHNBtn@example.com",
+          email: "TEST@TEST.com",
           password: "password",
           password_confirmation: "password" 
         )
