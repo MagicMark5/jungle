@@ -119,4 +119,69 @@ RSpec.describe User, type: :model do
       end
     end
   end
+  describe '.authenticate_with_credentials' do
+    # examples for this class method here
+    context "Logging in" do
+      it "returns nil when given non-existing email" do 
+        user = User.authenticate_with_credentials("barfoo@example.com", "password")
+        expect(user).to be_nil
+      end
+      it "returns nil when given existing email and incorrect password" do
+        @user = User.new(
+          name: "Johnny",
+          last_name: "Button",
+          email: "johnBtn@example.com",
+          password: "password123",
+          password_confirmation: "password123" 
+        )
+
+        @user.save
+        user = User.authenticate_with_credentials("johnBtn@example.com", "password321")
+        expect(user).to be_nil
+      end
+      it "returns user when given existing email and correct password" do
+        @user = User.new(
+          name: "Johnny",
+          last_name: "Button",
+          email: "johnBtn@example.com",
+          password: "password123",
+          password_confirmation: "password123" 
+        )
+
+        @user.save
+        
+        user = User.authenticate_with_credentials("johnBtn@example.com", "password123")
+        expect(user.id).to be_present
+      end
+      it "returns user when given existing email with leading & trailing spaces and correct password" do
+        @user = User.new(
+          name: "Johnny",
+          last_name: "Button",
+          email: "johnBtn@example.com",
+          password: "password123",
+          password_confirmation: "password123" 
+        )
+
+        @user.save
+        
+        user = User.authenticate_with_credentials(" johnBtn@example.com ", "password123")
+        expect(user.id).to be_present
+      end
+      it "returns user when given existing email with wrong case and correct password" do
+        @user = User.new(
+          name: "Johnny",
+          last_name: "Button",
+          email: "johnBtn@example.com",
+          password: "password123",
+          password_confirmation: "password123" 
+        )
+
+        @user.save
+        
+        user = User.authenticate_with_credentials("johnbtn@example.com", "password123")
+        expect(user.id).to be_present
+      end
+
+    end
+  end
 end
