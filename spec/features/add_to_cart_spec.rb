@@ -17,7 +17,7 @@ RSpec.feature "AddToCart, increases cart items by 1", type: :feature, js: true d
     end
   end
 
-  scenario "click 'Add to Cart' button for one of the products" do |test_desc|
+  xscenario "click 'Add to Cart' button for one of the products" do |test_desc|
     puts test_desc
     # ACT
     visit root_path

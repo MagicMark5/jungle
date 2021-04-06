@@ -24,9 +24,9 @@ RSpec.feature "Navigate from home page to product detail page", type: :feature, 
     click_link("Details »", match: :first)
     
     # DEBUG / VERIFY
-    save_screenshot 'test2_product_details_page.png'
     #puts page.html
     expect(page).to have_css 'article.product-detail'
     expect(page).to have_css 'article.product-detail', count: 1
+    save_screenshot 'test2_product_details_page.png'
   end
 end
