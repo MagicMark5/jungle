@@ -26,6 +26,12 @@ Use Credit Card # 4111 1111 1111 1111 for testing success scenarios.
 
 More information in their docs: <https://stripe.com/docs/testing#cards>
 
+## Admin Features
+
+Basic Authorization for admin features: 
+username: "Jungle"
+password: "book"
+
 ## Dependencies
 
 * Rails 4.2 [Rails Guide](http://guides.rubyonrails.org/v4.2/)
