@@ -21,7 +21,7 @@ RSpec.feature "AddToCart, increases cart items by 1", type: :feature, js: true d
 
     # ACT
     visit '/login'
-
+    # first argument is just the name attribute of inputs
     fill_in 'email', with: 'johnBtn@example.com'
     fill_in 'password', with: 'password123'
     click_on 'Submit'
