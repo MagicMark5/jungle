@@ -1,6 +1,25 @@
 # Jungle
 
-A mini e-commerce application built with Rails 4.2 for purposes of teaching Rails by example.
+A mini e-commerce application built with Rails 4.2 for purposes of learning Rails by example.
+
+### Jungle Products 
+
+The landing page of Jungle shows a list of example products in the development database. Any active sales are shown in a banner on every page and all product prices are accordingly reflected. Users can begin shopping by adding items to their cart or clicking Details on a product to see a product specific view. 
+
+!["Products Index View"](https://github.com/MagicMark5/jungle/blob/master/docs/jungle_products.png?raw=true)
+
+### Jungle Cart 
+
+Users are able to view their cart and modify quantities of items before checking out with stripe 
+
+!["Cart View"](https://github.com/MagicMark5/jungle/blob/master/docs/jungle_cart.png?raw=true)
+
+### Admin View of Products
+
+Admin users are able to add or remove products, add new product categories, create new sales, and view product/categories statistics.
+
+!["Admin Products View"](https://github.com/MagicMark5/jungle/blob/master/docs/jungle_admin_products.png?raw=true)
+
 
 ## Additional Steps for Apple M1 Machines
 
