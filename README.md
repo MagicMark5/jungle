@@ -28,7 +28,7 @@ More information in their docs: <https://stripe.com/docs/testing#cards>
 
 ## Admin Features
 
-Basic Authorization for admin features: 
+#### Example Authorization to see admin features: 
 username: "Jungle"
 password: "book"
 
